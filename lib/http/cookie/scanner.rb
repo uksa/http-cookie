@@ -53,7 +53,7 @@ class HTTP::Cookie::Scanner < StringScanner
   def scan_value
     ''.tap { |s|
       case
-      when scan(/[^,;"]+/)
+      when scan(/[^,;]+/)
         s << matched
       when skip(/"/)
         # RFC 6265 2.2
